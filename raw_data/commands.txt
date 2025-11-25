@@ -1,0 +1,23 @@
+    1  mkdir raw_data
+    2  cd ./raw_data/
+    3  sudo apt update
+    4  sudo apt upgrade
+    5  wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR574/003/ERR5743893/ERR5743893_1.fastq.gz
+    6  wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR574/003/ERR5743893/ERR5743893_2.fastq.gz
+    7  sudo apt install fastqc
+    8  sudo apt install bwa
+    9  sudo apt install samtools
+   10  sudo apt install freebayes
+   11  sudo apt install git cmake g++
+   12  git clone --recursive
+   13  git clone --recursive https://github.com/freebayes/freebayes.git
+   14  cd freebayes
+   15  make
+   16  sudo make install
+   17  make install freebayes
+   18  make
+   19  cd..
+   20  cd ..
+   21  sudo make install
+   22  wget https://www.ebi.ac.uk/ena/browser/api/fasta/MN908947.3?download=true -O MN908947.fasta
+   23  history > commands.txt
