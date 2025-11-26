@@ -1,0 +1,4 @@
+    1  conda install -c bioconda freebayes
+    2  freebayes -h
+    3  freebayes --version
+    4  history > commands.txt
