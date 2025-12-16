@@ -27,4 +27,4 @@ freebayes -f MN908947.fasta ERR5743893.sorted.bam  > ERR5743893.vcf
 cat ./ERR5743893.vcf
 
 
-# Read Viral genomice variant calling file in wiki page for more details
+# Read Viral genomics variant calling file in wiki page for more details
