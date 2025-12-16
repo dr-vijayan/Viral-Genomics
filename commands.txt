@@ -1,14 +1,14 @@
 mkdir raw_data
 cd ./raw_data/
+wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR574/003/ERR5743893/ERR5743893_1.fastq.gz
+wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR574/003/ERR5743893/ERR5743893_2.fastq.gz
+wget https://www.ebi.ac.uk/ena/browser/api/fasta/MN908947.3?download=true -O MN908947.fasta
 sudo apt update
 sudo apt upgrade
 sudo apt install fastqc bwa samtools
 conda install -c bioconda freebayes
 conda update -c bioconda freebayes
 freebayes --version
-wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR574/003/ERR5743893/ERR5743893_1.fastq.gz
-wget -nc ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR574/003/ERR5743893/ERR5743893_2.fastq.gz
-wget https://www.ebi.ac.uk/ena/browser/api/fasta/MN908947.3?download=true -O MN908947.fasta
 fastqc ./ERR5743893_1.fastq.gz  ./ERR5743893_2.fastq.gz -0 qc_reports/
 bwa index ./MN908947.fasta
 gunzip ./ERR5743893_1.fastq.gz ./ERR5743893_2.fastq.gz
