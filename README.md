@@ -1,4 +1,4 @@
-Viral-genomics variant calling work flow
+Viral-genomics variant calling work flow (SARS COV 2 - COVID 19)
 # ENA --> Download rawdata
 # Install fastqc
 # install bwa
